@@ -2,29 +2,29 @@
 
 :root {
   /* Font sizes */
-  --font-size-xs: 0.75rem; /* 12px */
-  --font-size-sm: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-md: 1.125rem; /* 18px */
-  --font-size-lg: 1.25rem; /* 20px */
-  --font-size-xl: 1.5rem; /* 24px */
-  --font-size-xxl: 2rem; /* 32px */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.4rem;
 
   /* Spacing (Padding/Margin) */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-sm: 0.5rem; /* 8px */
-  --spacing-md: 1rem; /* 16px */
-  --spacing-lg: 1.5rem; /* 24px */
-  --spacing-xl: 2rem; /* 32px */
-  --spacing-xxl: 3rem; /* 48px */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
 
   /* Border radius */
-  --radius-xs: 0.125rem; /* 2px */
-  --radius-sm: 0.25rem; /* 4px */
-  --radius-md: 0.5rem; /* 8px */
-  --radius-lg: 1rem; /* 16px */
-  --radius-xl: 1.5rem; /* 24px */
-  --radius-full: 50%; /* rounded full */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
 
   /* color */
   --red: hsl(0, 78%, 62%);
@@ -78,7 +78,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 body {
@@ -108,19 +108,19 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  max-inline-size: 34em;
+  max-inline-size: 36rem;
 }
 
 header h1 {
   display: flex;
   flex-direction: column;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-3xl);
   line-height: 1.4;
 }
 
 header p {
   margin-block-start: var(--spacing-md);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
 }
 
 main {
@@ -132,32 +132,27 @@ main {
 
 main .card {
   background-color: var(--white);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 50%);
   border-radius: var(--radius-sm);
-  min-block-size: 13.5rem;
-  max-inline-size: 20rem;
+  min-block-size: 16.667rem;
+  max-inline-size: 23.333rem;
   padding-inline: var(--spacing-xl);
   padding-block: var(--spacing-lg);
 }
 
 main .card h2 {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   margin-block-end: var(--spacing-xs);
 }
 
 main .card p {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   margin-block-end: var(--spacing-xl);
 }
 
 main .card .img-container {
   display: flex;
   justify-content: end;
-}
-
-main .card .img-container img {
-  inline-size: 3rem;
-  block-size: 3rem;
 }
 
 #card-1 {
@@ -225,10 +220,18 @@ main .card .img-container img {
     max-inline-size: 600px;
   }
 
+  header h1 {
+    font-size: var(--font-size-xl);
+  }
+
   main {
     display: flex;
     flex-direction: column;
     inline-size: 100%;
     align-items: center;
+  }
+
+  main .card {
+    max-inline-size: 21rem;
   }
 }
