@@ -142,7 +142,7 @@ header {
 
 /* 
   ----------------------------
-    main css 
+    Main css 
   ----------------------------
 */
 main {
@@ -151,8 +151,18 @@ main {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
 }
+/* 
+  ----------------------------
+    Main css end here
+  ----------------------------
+*/
 
-main .card {
+/* 
+  ----------------------------
+    Card css
+  ----------------------------
+*/
+.card {
   background-color: var(--white);
   box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 50%);
   border-radius: var(--radius-sm);
@@ -204,7 +214,7 @@ main .card {
 }
 /* 
   ----------------------------
-    main css end here
+    Card css end here
   ----------------------------
 */
 
@@ -216,14 +226,24 @@ main .card {
 
   /* 
     ----------------------------
-      main css 
+      Main css 
     ----------------------------
   */
   main {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* 
+    ----------------------------
+      Main css end here
+    ----------------------------
+  */
 
-  main .card {
+  /* 
+    ----------------------------
+      Card css 
+    ----------------------------
+  */
+  .card {
     &#card-1 {
       grid-column: 1 / span 2;
       grid-row: 1;
@@ -248,7 +268,7 @@ main .card {
   }
   /* 
     ----------------------------
-      main css end here
+      Card css end here
     ----------------------------
   */
 }
@@ -261,10 +281,10 @@ main .card {
 
   /* 
     ----------------------------
-      main css 
+      Main css 
     ----------------------------
   */
-  main .card {
+  .card {
     &#card-1 {
       grid-row: 1;
       grid-column: 1;
@@ -287,7 +307,7 @@ main .card {
   }
   /* 
     ----------------------------
-      main css end here
+      Main css end here
     ----------------------------
   */
 }
@@ -316,7 +336,7 @@ main .card {
 
   /* 
     ----------------------------
-      main css 
+      Main css 
     ----------------------------
   */
   main {
@@ -325,13 +345,23 @@ main .card {
     inline-size: 100%;
     align-items: center;
   }
+  /* 
+    ----------------------------
+      Main css end here
+    ----------------------------
+  */
 
-  main .card {
+  /* 
+    ----------------------------
+      Card css 
+    ----------------------------
+  */
+  .card {
     max-inline-size: 21rem;
   }
   /* 
     ----------------------------
-      main css end here
+      Card css end here 
     ----------------------------
   */
 }
