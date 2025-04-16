@@ -37,9 +37,11 @@
   --white: hsl(0, 0%, 100%);
 }
 
-/* -----------------------
-    Color classes 
--------------------------- */
+/* 
+  ----------------------------
+    Text color css 
+  ---------------------------- 
+*/
 .text-grey-400 {
   color: var(--grey-400);
 }
@@ -47,10 +49,17 @@
 .text-grey-500 {
   color: var(--grey-500);
 }
+/* 
+  ----------------------------
+    Text color css end here 
+  ---------------------------- 
+*/
 
-/* -----------------------
-    Typography classes 
--------------------------- */
+/* 
+  ----------------------------
+    Font style 
+  ----------------------------
+*/
 .poppins-extralight {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
@@ -68,10 +77,12 @@
   font-weight: 600;
   font-style: normal;
 }
+/* 
+  ----------------------------
+    Font style end here
+  ----------------------------
+*/
 
-/*------------------------ 
-    Component classes  
---------------------------*/
 * {
   padding: 0px;
   margin: 0px;
@@ -98,6 +109,11 @@ body {
   margin: var(--spacing-xl);
 }
 
+/* 
+  ----------------------------
+    Header css
+  ----------------------------
+*/
 header {
   margin-block-end: var(--spacing-2xl);
   text-align: center;
@@ -118,64 +134,79 @@ header {
     font-size: var(--font-size-base);
   }
 }
+/* 
+  ----------------------------
+    Header css end here
+  ----------------------------
+*/
 
+/* 
+  ----------------------------
+    main css 
+  ----------------------------
+*/
 main {
   gap: var(--spacing-lg);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+}
 
-  & .card {
-    background-color: var(--white);
-    box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 50%);
-    border-radius: var(--radius-sm);
-    min-block-size: 16.667rem;
-    max-inline-size: 23.333rem;
-    padding-inline: var(--spacing-xl);
-    padding-block: var(--spacing-lg);
-  }
+main .card {
+  background-color: var(--white);
+  box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 50%);
+  border-radius: var(--radius-sm);
+  min-block-size: 16.667rem;
+  max-inline-size: 23.333rem;
+  padding-inline: var(--spacing-xl);
+  padding-block: var(--spacing-lg);
 
-  & .card h2 {
+  & h2 {
     font-size: var(--font-size-lg);
     margin-block-end: var(--spacing-xs);
   }
 
-  & .card p {
+  & p {
     font-size: var(--font-size-sm);
     margin-block-end: var(--spacing-xl);
   }
 
-  & .card .container-img {
+  & .container-img {
     display: flex;
     justify-content: end;
   }
 
-  & #card-1 {
+  &#card-1 {
     grid-row: 1 / span 2;
     grid-column: 1;
     align-items: center;
     border-block-start: 4px solid var(--cyan);
   }
 
-  & #card-2 {
+  &#card-2 {
     grid-row: 1;
     grid-column: 2;
     border-block-start: 4px solid var(--red);
   }
 
-  & #card-3 {
+  &#card-3 {
     grid-row: 2;
     grid-column: 2;
     align-items: center;
     border-block-start: 4px solid var(--orange);
   }
 
-  & #card-4 {
+  &#card-4 {
     grid-row: 1 / span 2;
     grid-column: 3;
     border-block-start: 4px solid var(--blue);
   }
 }
+/* 
+  ----------------------------
+    main css end here
+  ----------------------------
+*/
 
 /* responsive large devices  */
 @media only screen and (max-width: 1024px) {
@@ -183,31 +214,43 @@ main {
     max-inline-size: 1024px;
   }
 
+  /* 
+    ----------------------------
+      main css 
+    ----------------------------
+  */
   main {
     grid-template-columns: repeat(2, 1fr);
+  }
 
-    & #card-1 {
+  main .card {
+    &#card-1 {
       grid-column: 1 / span 2;
       grid-row: 1;
       justify-self: center;
     }
 
-    & #card-2 {
+    &#card-2 {
       grid-column: 1;
       grid-row: 2;
     }
 
-    & #card-3 {
+    &#card-3 {
       grid-column: 2;
       grid-row: 2;
     }
 
-    & #card-4 {
+    &#card-4 {
       grid-column: 1 / span 2;
       grid-row: 3;
       justify-self: center;
     }
   }
+  /* 
+    ----------------------------
+      main css end here
+    ----------------------------
+  */
 }
 
 /* Medium devices responsive */
@@ -216,27 +259,37 @@ main {
     max-inline-size: 768px;
   }
 
-  main {
-    & #card-1 {
+  /* 
+    ----------------------------
+      main css 
+    ----------------------------
+  */
+  main .card {
+    &#card-1 {
       grid-row: 1;
       grid-column: 1;
     }
 
-    & #card-2 {
+    &#card-2 {
       grid-row: 1;
       grid-column: 2;
     }
 
-    & #card-3 {
+    &#card-3 {
       grid-row: 2;
       grid-column: 1;
     }
 
-    & #card-4 {
+    &#card-4 {
       grid-row: 2;
       grid-column: 2;
     }
   }
+  /* 
+    ----------------------------
+      main css end here
+    ----------------------------
+  */
 }
 
 /* Small devices repsonsive */
@@ -245,20 +298,40 @@ main {
     max-inline-size: 600px;
   }
 
+  /* 
+    ----------------------------
+      Header css
+    ----------------------------
+  */
   header {
     & h1 {
       font-size: var(--font-size-xl);
     }
   }
+  /* 
+    ----------------------------
+      Header css end here
+    ----------------------------
+  */
 
+  /* 
+    ----------------------------
+      main css 
+    ----------------------------
+  */
   main {
     display: flex;
     flex-direction: column;
     inline-size: 100%;
     align-items: center;
-
-    & .card {
-      max-inline-size: 21rem;
-    }
   }
+
+  main .card {
+    max-inline-size: 21rem;
+  }
+  /* 
+    ----------------------------
+      main css end here
+    ----------------------------
+  */
 }
